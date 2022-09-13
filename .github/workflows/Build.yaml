@@ -30,7 +30,8 @@ jobs:
       - name: Build all build type and flavor permutations
         run: ./gradlew assembleDebug --stacktrace
 
-      - uses: mobile-dev-inc/action-upload@v2.1.0
+      - name: Upload to mobile.dev
+        uses: mobile-dev-inc/action-upload@v2.1.0
         with:
           api-key: ${{ secrets.MOBILE_DEV_API_KEY }}
           app-file: app/build/outputs/apk/demo/debug/app-demo-debug.apk
