@@ -33,5 +33,6 @@ jobs:
       - name: Upload to mobile.dev
         uses: mobile-dev-inc/action-upload@v2.1.0
         with:
+          name: Test upload
           api-key: ${{ secrets.MOBILE_DEV_API_KEY }}
           app-file: app/build/outputs/apk/demo/debug/app-demo-debug.apk
